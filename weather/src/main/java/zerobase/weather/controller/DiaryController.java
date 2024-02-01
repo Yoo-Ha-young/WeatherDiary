@@ -14,7 +14,7 @@ import zerobase.weather.service.DiaryService;
 
 import java.time.LocalDate;
 import java.util.List;
-@RestController // 404 200 500 상태코드를 지정해서 내려줄 수 있게끔 한다.
+@RestController
 public class DiaryController {
     private final DiaryService diaryService;
 

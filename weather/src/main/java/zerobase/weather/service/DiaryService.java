@@ -59,11 +59,14 @@ public class DiaryService {
     // [다이어리 작성, 새로운 다이어리 생성 API]
     @Transactional(isolation = Isolation.SERIALIZABLE)
     public void createDiary(LocalDate date, String text) { // 다이어리 레포지토리를 통해 디비에 들어가야 한다.
-//        // 1. open weather map에서 날씨 데이터 가져오기
+
+
+        // 1. open weather map에서 날씨 데이터 가져오기
 //        String weatherData = getWeatherString();
-//        // 2. 받아온 날씨 데이터 파싱하기
+        // 2. 받아온 날씨 데이터 파싱하기
 //        Map<String, Object> parsedWeather = parseWeather(weatherData);
 // →  매일 1시에 저장된 데이터로 이용해줄 것이기 때문에 해당 내용은 수정된다.
+
         logger.info("started to create diary"); // info 레벨의 로그
         // 1. 날씨 데이터 가져오기(DB(domain)에서 가져오기)
         DateWeather nowDateWeather = getDateWeather(date); // service의 메서드를 통해서 db에 저장되어있는 날씨 데이터를 날짜로 가져와서,

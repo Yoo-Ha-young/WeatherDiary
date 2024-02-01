@@ -3,8 +3,8 @@ package zerobase.weather.domain;
 
 // 매일 날씨를 저장하는 클래스
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
